@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cards</h1>
+
+<table>
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.name %></td>
+        <td><%= card.start_time %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= month_calendar events: @cards do |date, cards| %>
+  <%= date.day %>
+  <%= render 'form', card: @card %>
+  <% cards.each do |card| %>
+    <%= link_to 'やったよ！', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+
+
