@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$color-text: #353866;
-$color-main: #ef5285;
-$color-sub : #a5dff9;
-$color-bg  : #6C49B8;
-$color-tbg : #fff;
-$color-link: #84B1ED;
+$color-text     : #222;
+$color-main     : #ef5285;
+$color-sub      : #a5dff9;
+$color-bg       : #6C49B8;
+$color-thbg     : #fff;
+$color-tdbg     : #eee;
+$color-tdbg-pn  : #ddd;
+$color-link     : #84b1ed;
+$color-today    : #ef5285;
 
 // スタンプ表示非表示の制御
 .simple-calendar {
@@ -44,19 +47,57 @@ a {
 }
 
 .simple-calendar {
+  font-family: 'Rubik', sans-serif;
   margin: 10px;
   .calendar-heading {
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	text-align: center;
     .calendar-title {
+      color: $color-tdbg;
+      padding: 0 0 4px;
+      .month {
+        font-size: 20px;
+      }
+      .year {
+        font-size: 20px;
+      }
+    }
+    .to-previous .material-icons-outlined,
+    .to-next .material-icons-outlined{
+      font-size: 30px;
     }
   }
   .table {
-    background: $color-tbg;
+    table-layout: fixed;
     th, td {
       border-color: $color-bg;
     }
+    th {
+      background: $color-thbg;
+      font-size: 12px;
+      .abbr_day_names_sub {
+      	font-size: 11px;
+      	opacity: 0.6;
+      }
+    }
+    td {
+      background: $color-tdbg;
+    }
     .day {
-      font-family: 'Abel', sans-serif;
+      color: $color-text;
       position: relative;
+    }
+    .today {
+      background: $color-today;
+    }
+    .prev-month,
+    .next-month {
+      background: $color-tdbg-pn;
+      color: lighten($color-text, 50%);
+    }
+    .current-month {
     }
     .field-stamp_button input {
       background-color: transparent;
@@ -67,17 +108,40 @@ a {
       left: 0;
       overflow: hidden;
       &:hover {
+        opacity: 0.7;
       }
     }
     .done {
-
+      display: block;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      text-align: center;
+      vertical-align: middle;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .past .done {
+      opacity: 0.7;
     }
     tr:nth-of-type(1) {
       .wday-1 .done {
         
       }
     }
-
   }
 }
 
+.emergency-exit {
+  margin: 0 12px;
+  text-align: right;
+  .material-icons-outlined {
+    font-size: 20px;
+    margin: 0 -2px 0 0;
+  }
+}

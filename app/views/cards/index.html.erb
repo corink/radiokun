@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <%= month_calendar events: @cards do |date, cards| %>
   <%= date.day %>
   <%= render 'form', card: @card %>
   <% cards.each do |card| %>
-    <%= link_to('やったよ！', card, {method: :delete, data: { confirm: '消す？' }, class: "done"}) %>
+    <%= button_to('やったよ！', card, {method: :delete, data: { confirm: '消す？' }, class: "done"}) %>
   <% end %>
 <% end %>
 
-<%= link_to 'もしもの時のどこでもドア', new_card_path %>
+<p class="emergency-exit">
+  <%= link_to new_card_path do %>
+    <span class="material-icons-outlined">directions_run</span><span class="material-icons-outlined">sensor_door</span>
+  <% end %>
+</p>
+<p id="notice"><%= notice %></p>
