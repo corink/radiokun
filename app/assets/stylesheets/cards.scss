@@ -1,3 +1,83 @@
 // Place all the styles related to the Cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$color-text: #353866;
+$color-main: #ef5285;
+$color-sub : #a5dff9;
+$color-bg  : #6C49B8;
+$color-tbg : #fff;
+$color-link: #84B1ED;
+
+// スタンプ表示非表示の制御
+.simple-calendar {
+  .field-name {
+    display: none;
+  }
+  .field-start_time {
+    display: none;
+  }
+  .field-stamp_button {
+    display: none;
+  }
+  .today .field-stamp_button {
+    display: block;
+  }
+  .has-events .field-stamp_button {
+    display: none;
+  }
+}
+
+// 以下スタイル
+body {
+  background: $color-bg;
+}
+
+a {
+  color: $color-link;
+}
+
+.field-stamp_button input {
+  display: block;
+  cursor: pointer;
+  background-color: $color-sub;
+}
+
+.simple-calendar {
+  margin: 10px;
+  .calendar-heading {
+    .calendar-title {
+    }
+  }
+  .table {
+    background: $color-tbg;
+    th, td {
+      border-color: $color-bg;
+    }
+    .day {
+      font-family: 'Abel', sans-serif;
+      position: relative;
+    }
+    .field-stamp_button input {
+      background-color: transparent;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      &:hover {
+      }
+    }
+    .done {
+
+    }
+    tr:nth-of-type(1) {
+      .wday-1 .done {
+        
+      }
+    }
+
+  }
+}
+

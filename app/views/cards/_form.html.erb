@@ -1,16 +1,16 @@
 <%= form_with(model: Card.new, local: true) do |form| %>
 
-  <div class="field">
+  <div class="field field-name">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="field field-start_time">
     <%= form.label :start_time %>
     <%= form.datetime_select :start_time %>
   </div>
 
-  <div class="actions">
+  <div class="actions field-stamp_button">
     <%= form.submit "スタンプを押す" %>
   </div>
 <% end %>
