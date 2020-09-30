@@ -7,7 +7,7 @@ $color-main     : #ef5285;
 $color-sub      : #a5dff9;
 $color-bg       : #5040ce;
 $color-thbg     : #fff;
-$color-thbg-sun : #FFEEE4;
+$color-thbg-sun : #ffeee4;
 $color-thbg-sat : #d6ecfa;
 $color-tdbg     : #f4f4f4;
 $color-tdbg-pn  : #dfdfdf;
@@ -124,6 +124,7 @@ a {
     }
     .field-stamp_button input {
       background-color: transparent;
+      color: transparent;
       height: 100%;
       width: 100%;
       position: absolute;
@@ -135,7 +136,12 @@ a {
       }
     }
     .done {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50% 80%;
+      background-size: 46px 46px;
       display: block;
+      color: transparent;
       cursor: pointer;
       height: 100%;
       width: 100%;
@@ -149,12 +155,140 @@ a {
         opacity: 0.7;
       }
     }
-    .past .done {
-      opacity: 0.7;
+    .wday-0 .done {
+      background-image: image-url("stamp_1.png");
+    }
+    .wday-1 .done {
+      background-image: image-url("stamp_2.png");
+    }
+    .wday-2 .done {
+      background-image: image-url("stamp_3.png");
+    }
+    .wday-3 .done {
+      background-image: image-url("stamp_4.png");
+    }
+    .wday-4 .done {
+      background-image: image-url("stamp_5.png");
+    }
+    .wday-5 .done {
+      background-image: image-url("stamp_6.png");
+    }
+    .wday-6 .done {
+      background-image: image-url("stamp_7.png");
     }
     tr:nth-of-type(1) {
+      .wday-0 .done {
+        background-image: image-url("stamp_3.png");
+      }
       .wday-1 .done {
-        
+        background-image: image-url("stamp_4.png");
+      }
+      .wday-2 .done {
+        background-image: image-url("stamp_5.png");
+      }
+      .wday-3 .done {
+        background-image: image-url("stamp_6.png");
+      }
+      .wday-4 .done {
+        background-image: image-url("stamp_7.png");
+      }
+      .wday-5 .done {
+        background-image: image-url("stamp_1.png");
+      }
+      .wday-6 .done {
+        background-image: image-url("stamp_2.png");
+      }
+    }
+    tr:nth-of-type(2) {
+      .wday-0 .done {
+        background-image: image-url("stamp_5.png");
+      }
+      .wday-1 .done {
+        background-image: image-url("stamp_6.png");
+      }
+      .wday-2 .done {
+        background-image: image-url("stamp_7.png");
+      }
+      .wday-3 .done {
+        background-image: image-url("stamp_1.png");
+      }
+      .wday-4 .done {
+        background-image: image-url("stamp_2.png");
+      }
+      .wday-5 .done {
+        background-image: image-url("stamp_3.png");
+      }
+      .wday-6 .done {
+        background-image: image-url("stamp_4.png");
+      }
+    }
+    tr:nth-of-type(3) {
+      .wday-0 .done {
+        background-image: image-url("stamp_2.png");
+      }
+      .wday-1 .done {
+        background-image: image-url("stamp_1.png");
+      }
+      .wday-2 .done {
+        background-image: image-url("stamp_4.png");
+      }
+      .wday-3 .done {
+        background-image: image-url("stamp_3.png");
+      }
+      .wday-4 .done {
+        background-image: image-url("stamp_5.png");
+      }
+      .wday-5 .done {
+        background-image: image-url("stamp_7.png");
+      }
+      .wday-6 .done {
+        background-image: image-url("stamp_6.png");
+      }
+    }
+    tr:nth-of-type(4) {
+      .wday-0 .done {
+        background-image: image-url("stamp_4.png");
+      }
+      .wday-1 .done {
+        background-image: image-url("stamp_5.png");
+      }
+      .wday-2 .done {
+        background-image: image-url("stamp_6.png");
+      }
+      .wday-3 .done {
+        background-image: image-url("stamp_7.png");
+      }
+      .wday-4 .done {
+        background-image: image-url("stamp_1.png");
+      }
+      .wday-5 .done {
+        background-image: image-url("stamp_2.png");
+      }
+      .wday-6 .done {
+        background-image: image-url("stamp_3.png");
+      }
+    }
+    tr:nth-of-type(5) {
+      .wday-0 .done {
+        background-image: image-url("stamp_6.png");
+      }
+      .wday-1 .done {
+        background-image: image-url("stamp_7.png");
+      }
+      .wday-2 .done {
+        background-image: image-url("stamp_1.png");
+      }
+      .wday-3 .done {
+        background-image: image-url("stamp_2.png");
+      }
+      .wday-4 .done {
+        background-image: image-url("stamp_3.png");
+      }
+      .wday-5 .done {
+        background-image: image-url("stamp_4.png");
+      }
+      .wday-6 .done {
+        background-image: image-url("stamp_5.png");
       }
     }
   }
@@ -174,6 +308,7 @@ a {
 }
 
 .form-new {
+  font-family: sans-serif;
   margin: 10px;
   h1 {
     color: $color-title;

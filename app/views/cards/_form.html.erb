@@ -1,12 +1,12 @@
 <%= form_with(model: Card.new, local: true) do |form| %>
 
   <div class="field field-name">
-    <%= form.label :name %>
+    <%= form.label "空でよろし" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field field-start_time">
-    <%= form.label :start_time %>
+    <%= form.label "日付じゃよ" %>
     <%= form.datetime_select :start_time %>
   </div>
 
