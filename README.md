@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## なにをしたいのか
+1. カレンダーを表示させます。
+2. カレンダーは月単位のみ、かつ月単位で移動できます。
+3. その日のスタンプオン・オフを判断します。
+4. オフならオンにできます。オンならオフにするかの確認ダイアログが出ます。
+5. その月の合計日数とその月の現在オンになっている数を取得して表示します。
+6. スタンプのオン・オフは DB に保存されるようにします。
 
-Things you may want to cover:
+```
+カレンダーの上は
+＜　○月　＞
+カレンダーの下は
+　　n/31　　が表示されていて n=スタンプ押した数
+```
 
-* Ruby version
+5 は非必須。その非必須の事以外は完了。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## のこりの TODO
+- ホーム画面アイコン
+- もう少し動作が軽くならないだろうか
+- ちゃんと tofu すること
